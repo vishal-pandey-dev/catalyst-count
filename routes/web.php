@@ -23,7 +23,8 @@ Route::resource('home', HomeController::class);
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/users/login', [HomeController::class, 'login'])->name('user.login');
 Route::get('/users/registration', [HomeController::class, 'registration'])->name('user.registration');
-Route::post('/register', [HomeController::class, 'register'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/users', [HomeController::class, 'users'])->name('users');
 
 // Route::group(['middleware' => ['user', 'verified']], function(){
