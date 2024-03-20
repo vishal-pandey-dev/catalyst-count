@@ -16,14 +16,13 @@
                     <div class="form_main">
                         <h1 class="login_title">Register</h1>
                         <div class="textbar">
-                            <input type="text" class="form-control" placeholder="Full Name" id="name" name="name" required>
-                            <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
-                            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
-                            <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" id="confirmpassword" required>
+                            <input type="text"  form="registerform" class="form-control" placeholder="Full Name" id="name" name="name" required>
+                            <input type="email" form="registerform" class="form-control" placeholder="Email" id="email" name="email" required>
+                            <input type="password" form="registerform" class="form-control" placeholder="Password" name="password" id="password" required>
+                            <input type="password" form="registerform" class="form-control" placeholder="Confirm Password" name="password_confirmation" id="confirmpassword" required>
                         </div>
                         <form id="registerform" role="form" action="{{ route('register') }}" method="POST" onsubmit="return check_agree(this);">
                             @csrf
-                            <div class="h-captcha RecaptchaIm" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}" form="registerform"></div>
                             <button type="submit" class="btn btn-primary w-100">Register</button>
                         </form>
                         <p class="no_account">Already have an account? <a href="{{ route('user.login') }}" class="signup_here">Login here</a></p>

@@ -27,6 +27,8 @@ class RegisterController extends Controller
                 return back();
             }
         }
+
+        dd($request['name']);
         
 
         //$this->validator($request->all())->validate();
@@ -35,10 +37,9 @@ class RegisterController extends Controller
         'email' => 'required|email',
 		'password'=>'required',
         'password_confirmation' => 'required',
-        
         ]);
 
-        $user = User::create([
+        User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
