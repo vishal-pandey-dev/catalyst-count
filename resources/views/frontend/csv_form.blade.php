@@ -22,7 +22,7 @@
 <form id="uploadForm" action="{{ route('csv.import') }}" method="POST" enctype="multipart/form-data" style="padding: 10rem;">
     @csrf
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
+        <label for="exampleInputEmail1">Add Your File here</label>
         <input type="file" class="form-control" name="csv_file"  id="fileInput">
         <small id="emailHelp" class="form-text text-muted">Upload File Here</small>
       </div>
