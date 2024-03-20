@@ -28,7 +28,7 @@ class RegisterController extends Controller
             }
         }
 
-        dd($request['name']);
+
         
 
         //$this->validator($request->all())->validate();

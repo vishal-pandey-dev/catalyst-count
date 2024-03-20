@@ -9,7 +9,7 @@
                 <div class="login_form">
                     <div class="form_main">
                         <h1 class="login_title">Login</h1>
-                        <form id="loginform" role="form" action="{{ route('user.login') }}" method="POST">
+                        <form id="loginform" role="form" action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="textbar">
                                 <input type="email" class="form-control login_textbox" form="loginform" name="email" id="email" placeholder="Email Address" required>
